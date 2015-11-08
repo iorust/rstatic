@@ -1,0 +1,30 @@
+[package]
+name = "rstatic"
+version = "0.1.0"
+authors = ["Qing Yan <admin@zensh.com>"]
+description = "Static file serve by Rust"
+documentation = "https://github.com/iorust/rstatic"
+homepage = "https://github.com/iorust/rstatic"
+repository = "https://github.com/iorust/rstatic.git"
+readme = "README.md"
+keywords = ["file", "static", "server"]
+license = "MIT"
+
+[dependencies]
+iron = "0.2.4"
+mount = "0.0.9"
+staticfile = "0.0.6"
+
+[dependencies.clap]
+version = "1.4"
+default-features = false
+features = ["color"]
+
+[lib]
+name = "rstatic"
+path = "src/lib.rs"
+# dylib, rlib, staticlib
+# crate-type = ["staticlib"]
+
+[[bin]]
+name = "rstatic"
