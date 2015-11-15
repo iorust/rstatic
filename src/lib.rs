@@ -22,8 +22,6 @@ impl<'a> Serve<'a> {
             // .cache(Duration::from_secs(self.maxage));
 
         mount.mount("", handler);
-        Iron::new(mount).http(("127.0.0.1", self.port))
-            .ok()
-            .expect("Failed to serve");
+        Iron::new(mount).http(("127.0.0.1", self.port)).expect("Failed to serve");
     }
 }

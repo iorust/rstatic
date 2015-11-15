@@ -1,6 +1,6 @@
 [package]
 name = "rstatic"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Qing Yan <admin@zensh.com>"]
 description = "Static file serve by Rust"
 documentation = "https://github.com/iorust/rstatic"
@@ -11,12 +11,15 @@ keywords = ["file", "static", "server"]
 license = "MIT"
 
 [dependencies]
-iron = "0.2.4"
-mount = "0.0.9"
-staticfile = "0.0.6"
+iron = "*"
+mount = "*"
+
+[dependencies.staticfile]
+version = "*"
+# features = ["cache"]
 
 [dependencies.clap]
-version = "1.4"
+version = "*"
 default-features = false
 features = ["color"]
 
