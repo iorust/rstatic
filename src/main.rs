@@ -6,7 +6,7 @@ use clap::{Arg, App};
 
 fn main() {
     let matches = App::new("rstatic")
-        .version("0.1.1")
+        .version("0.1.2")
         .about("Static file serve by Rust")
         .author("Qing Yan <admin@zensh.com>")
         .arg(Arg::with_name("PORT")
@@ -26,11 +26,11 @@ fn main() {
 
     if let Some(_port) = matches.value_of("PORT") {
         port = u16::from_str(_port).expect("Failed to read port");
-    };
+    }
 
     if let Some(_path) = matches.value_of("PATH") {
         path = _path;
-    };
+    }
 
     let serve = rstatic::Serve {port: port, path: path, maxage: 0};
 
