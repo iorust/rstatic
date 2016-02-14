@@ -6,7 +6,7 @@ use clap::{Arg, App};
 
 fn main() {
     let matches = App::new("rstatic")
-        .version("0.1.2")
+        .version("0.1.3")
         .about("Static file serve by Rust")
         .author("Qing Yan <admin@zensh.com>")
         .arg(Arg::with_name("PORT")
